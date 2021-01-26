@@ -1,0 +1,9 @@
+universe                = parallel
+executable              = hello
+machine_count = 2
+log                     = hello.log
+output                  = outfile.txt
+error                   = errors.txt
+should_transfer_files   = Yes
+when_to_transfer_output = ON_EXIT
+queue
