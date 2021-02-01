@@ -4,11 +4,14 @@
 int main( int argc, char *argv[] ) { 
     int n, myid, numprocs, i;
     double mypi, pi, h, sum, x;
-MPI_Init(&argc,&argv); MPI_Comm_size(MPI_COMM_WORLD,&numprocs); MPI_Comm_rank(MPI_COMM_WORLD,&myid); 
-while (1) {
+MPI_Init(&argc,&argv); MPI_Comm_size(MPI_COMM_WORLD,&numprocs); 
+MPI_Comm_rank(MPI_COMM_WORLD,&myid); 
+int a =0;
+while (a<2) {
+a++;
 if (myid == 0) {
-printf("Enter the number of intervals: (0 quits) "); scanf("%d",&n);
-// n=1000;
+
+n=10000;
  }
 MPI_Bcast(&n, 1, MPI_INT, 0, MPI_COMM_WORLD); if (n == 0)
 break;
