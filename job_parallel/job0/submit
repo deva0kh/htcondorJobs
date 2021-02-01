@@ -1,0 +1,9 @@
+universe     = parallel
+executable   = hello
+output       = outputfile
+error        = errorfile
+log          = pi.log
+machine_count = 2
+should_transfer_files = yes
+
+queue
